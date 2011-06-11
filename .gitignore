@@ -1,0 +1,7 @@
+*.pdf
+*.out
+*.log
+*.aux
+*.bib
+!figury/*.pdf
+

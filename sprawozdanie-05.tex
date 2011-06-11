@@ -1,0 +1,58 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper]{geometry}
+
+\usepackage{polski}
+\usepackage{xltxtra}
+\usepackage{indentfirst}
+\usepackage{relsize}
+\usepackage{fancyvrb}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+%% tweak fonts
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont{Charis SIL}
+\setsansfont[Scale=MatchLowercase]{Helvetica Neue}
+\setmonofont[Scale=MatchLowercase]{Menlo}
+\linespread{1.25}
+
+%% define custom commands and environments
+\DefineVerbatimEnvironment%
+  {SmallVerbatim}%
+  {Verbatim}{fontsize=\relsize{-0.5},numbers=left,numbersep=-10pt,frame=lines,tabsize=4}
+
+\newcommand{\f}[1]{\texttt{#1}}
+\newcommand{\s}[1]{\textsf{#1}}
+
+\begin{document}
+
+%%fakesection{Tytuł}
+\title{
+  Sprawozdanie nr~5 z~laboratorium\\Podstaw Inżynierii Oprogramowania
+}
+\author{
+  Grzegorz Bartkowiak\\
+  Tomasz Cudziło\\
+  Mateusz Ochtera\\
+  Gustaw Wypych\\
+  \\
+  \textsc{PW EE Informatyka}\\[10pt]
+}
+\date{\today}
+\maketitle
+
+\section{Weryfikacja systemu aukcyjnego}
+
+Dokument opisuje w~częściach proces weryfikacji systemu aukcyjnego. Zawiera
+przykładowe testy modułów systemu, wydajnościowe i~akceptacyjne.
+
+Każdy scenariusz testowy musi posiadać opis wykonywanych czynności, opis danych
+wejściowych oraz kryteria wyznaczające powodzenie testu.
+
+\section{Testy modułów}
+
+\section{Testy wydajnościowe}
+
+\section{Testy akceptacyjne}
+
+\end{document}
+
