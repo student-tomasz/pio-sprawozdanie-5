@@ -48,7 +48,59 @@ przykładowe testy modułów systemu, wydajnościowe i~akceptacyjne.
 Każdy scenariusz testowy musi posiadać opis wykonywanych czynności, opis danych
 wejściowych oraz kryteria wyznaczające powodzenie testu.
 
-\section{Testy modułów}
+\section{Testy jednostokowe}
+
+\subsection{Moduł rejestracji użytkowników}
+
+\subsubsection{Test na poprawnych danych}
+\begin{description}
+  \item[Opis testu] \hfill \\
+    Test sprawdza poprawność obiektu typu \f{Klient} tworzonego przez metodę
+    przyjmującą dane klienta.
+  \item[Dane wejściowe] \hfill \\
+    Poprawne, fikcyjne dane klienta.
+  \item[Kryteria oceny] \hfill \\
+    100\% zgodność danych w~obiekcie z~danymi wejściowymi.
+\end{description}
+
+\subsubsection{Testy na nieprawidłowych danych}
+Testy jednostkowe na nieprawidłowych danych mają identyczny przebieg. Każdy
+test posiada dane wejściowe posiadające jeden, specyficzny błąd. Zadaniem
+każdego testu jest sprawdzenie czy metoda rejestracji użytkownika wychwytuje
+ten błąd i~czy zwraca odpowiedni wyjątek.
+
+Niżej jest opisany przykładowy test posiadający błąd w~danych dotyczących karty
+kredytowej klienta.
+
+\begin{description}
+  \item[Opis testu] \hfill \\
+    Test sprawdza czy funkcja tworząca obiekt \f{Klient} odpowiednio reaguje na
+    błędne dane związane z~podanymi przez niego informacjami o~karcie kredytowej.
+  \item[Dane wejściowe] \hfill \\
+    Niepoprawne, fikcyjne dane klienta.
+  \item[Kryteria oceny] \hfill \\
+    Metoda wyrzuca wyjątek.\\
+    Typ wyjątku to \f{InvalidCreditCardInfoException}.
+\end{description}
+
+\subsection{Moduł aukcji}
+
+\subsubsection{Wystawianie przedmiotu na aukcję}
+\begin{description}
+  \item[Opis testu] \hfill \\
+    Test sprawdza funkcję tworzącą aukcję na podstawie przekazanego jej obiektu
+    przedmiotu.
+  \item[Przygotowanie do testu] \hfill \\
+    Aktywne, fikcyjne konto klienta.\\
+    Fikcyjne przedmioty przypisane do tego konta.
+  \item[Dane wejściowe] \hfill \\
+    Obiekt reprezentujący przedmiot, który należy do klienta wywołującego
+    testowaną funkcję.\\
+    Cena wywoławcza, data rozpoczęcia aukcji.
+  \item[Kryteria oceny] \hfill \\
+    Zostaje utworzona aukcja, której właściciel, przedmiot oraz reszta danych
+    są zgodne z~danymi wejściowymi.
+\end{description}
 
 \section{Testy wydajnościowe}
 
