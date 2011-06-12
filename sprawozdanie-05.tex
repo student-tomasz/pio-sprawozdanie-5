@@ -85,6 +85,35 @@ wejściowych oraz kryteria wyznaczające powodzenie testu.
 
 \section{Testy akceptacyjne}
 
+\subsection{Tworzenie aukcji}
+\begin{description}
+  \item[Opis testu] \hfill \\
+    Tester stworzy grupę aukcji i spróbuje je uruchomić.
+  \item[Dane wejściowe] \hfill \\
+    Nazwy oraz treść stron aukcyjnych.
+  \item[Kryteria oceny] \hfill \\
+    Poprawność danych wejściowych z zapisanymi w~bazie i~wyświetlanymi na
+    stronach.\\
+    Prawidłowa reakcja na próby stworzenia duplikatów istniejących stron.\\
+    Notyfikacje dostarczone do opiekunów aukcji.
+\end{description}
+
+\subsection{Wystawianie przedmiotu na aukcji}
+\begin{description}
+  \item[Opis testu] \hfill \\
+    Testerzy przejdą przez cały proces wystawiania przedmiotu na aukcji.
+    Zaczynając od wypełnienia formularza i przekazania przedmiotu kurierowi,
+    do pojawienia się strony aukcyjnej w serwisie.
+  \item[Dane wejściowe] \hfill \\
+    Opis przedmiotu biorącego udział w teście.
+  \item[Kryteria oceny] \hfill \\
+    Średni czas transportu przedmiotu oraz katalogowanie w magazynie domu
+    aukcyjnego po zgłoszeniu w systemie nie przekracza 5 dni roboczych.\\
+    Odpowiednia reakcja systemu w~razie napotkania nieścisłości w formularzu
+    wysyłkowym klienta.\\
+    Porównanie oczekiwań klienta z stworzoną stroną aukcyjną.
+\end{description}
+
 \subsection{Udział w~aukcji}
 \begin{description}
   \item[Opis testu] \hfill \\
