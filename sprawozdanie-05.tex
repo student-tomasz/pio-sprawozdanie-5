@@ -52,6 +52,37 @@ wejściowych oraz kryteria wyznaczające powodzenie testu.
 
 \section{Testy wydajnościowe}
 
+\subsection{Rejestracja użytkownika}
+\begin{description}
+  \item[Opis testu] \hfill \\
+    Wygenerowane zostanie 50~tys. poprawnych, losowych rekordów z~danymi
+    klientów. Zostaną one wprowadzone do bazy danych z~wykorzystaniem \f{API}
+    systemu i~porównane z~wygenerowanym zestawem.
+  \item[Dane wejściowe] \hfill \\
+    Losowe dane klientów, generowane na podstawie danych z~książek
+    telefonicznych.
+  \item[Kryteria oceny] \hfill \\
+    100\% zgodność danych wejściowych z~danymi w~bazie danych.\\
+    Czas wprowadzania danych do bazy krótszy niż $0.3 s$.
+\end{description}
+
+\subsection{Wyszukiwanie aukcji}
+\begin{description}
+  \item[Opis testu] \hfill \\
+    Zostanie automatycznie przeprowadzonych tysiąc wyszukiwań na grupie
+    wcześniej przygotowanych stron aukcyjnych. Wyszukiwania będą oparte na
+    liście tagów. Tagi wprowadzane będą do wyszukiwarki systemu aukcyjnego
+    dostępnej użytkownikom z~interfejsu webowego.
+  \item[Przygotowanie do testu] \hfill \\
+    Wygenerowanie fikcyjnych, otagowanych stron aukcyjnych.
+  \item[Dane wejściowe] \hfill \\
+    Lista słów kluczowych występujących (lub nie) na stronach aukcyjnych.
+  \item[Kryteria oceny] \hfill \\
+    Średni czas jednego wyszukiwania poniżej $10 ms$.\\
+    Odpowiedni podzespół przygotowanych stron aukcyjnych musi być
+    przedstawiony, w~zależności od wyszukiwanego słowa kluczowego.
+\end{description}
+
 \section{Testy akceptacyjne}
 
 \subsection{Udział w~aukcji}
