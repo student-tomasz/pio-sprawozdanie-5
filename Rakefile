@@ -4,7 +4,7 @@ $lf = "-interaction=nonstopmode"
 $exec = "sprawozdanie-05.pdf"
 
 rule '.pdf' => '.tex' do |t|
-  for i in 1..2 do
+  2.times do
     sh "#{$lc} #{$lf} #{t.source}"
   end
 end
